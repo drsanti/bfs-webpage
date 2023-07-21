@@ -1,0 +1,33 @@
+/* @import '@fontsource/manrope'; */
+/* @import '@fontsource/jetbrains-mono'; */
+
+@tailwind base;
+@tailwind components;
+@tailwind variants;
+@tailwind utilities;
+
+@layer utilities {
+	.thai {
+		font-family: 'kanit';
+		/* font-family: 'kanit'; */
+	}
+}
+
+*{
+	@apply thai;
+}
+
+@font-face {
+	font-family: 'kanit';
+	src: local('kanit'), local('kanit'), url('$lib/fonts/Kanit/Kanit-Regular.ttf');
+	font-weight: medium;
+	font-display: swap;
+}
+
+
+@font-face {
+	font-family: 'plex';
+	src: local('plex'), local('plex'), url('$lib/fonts/IBM_Plex_Sans_Thai_Looped/IBMPlexSansThaiLooped-Regular.ttf');
+	font-weight: normal;
+	font-display: swap;
+}
