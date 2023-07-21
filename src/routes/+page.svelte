@@ -20,14 +20,17 @@
 			})
 			.start();
 
-		BfsGLTFLoader.getInstance().loadGLTF('models/cube1.glb', {
-			onProgress: (info: ModelDownloadInfo) => {
-				console.log(info.percent.toFixed(2));
-			},
-			onLoaded: (data: ModelData) => {
-				console.log(data.glTF.scenes);
+		BfsGLTFLoader.getInstance().loadGLTF(
+			'https://github.com/drsanti/bfs-webpage/blob/main/docs/models/cube1.glb',
+			{
+				onProgress: (info: ModelDownloadInfo) => {
+					console.log(info.percent.toFixed(2));
+				},
+				onLoaded: (data: ModelData) => {
+					console.log(data.glTF.scenes);
+				}
 			}
-		});
+		);
 	});
 	onDestroy(() => {
 		looper?.dispose();
