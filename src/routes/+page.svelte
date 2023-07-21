@@ -20,7 +20,7 @@
 			})
 			.start();
 
-		BfsGLTFLoader.getInstance().loadGLTF('/cube1.glb', {
+		BfsGLTFLoader.getInstance().loadGLTF('./cube1.glb', {
 			onProgress: (info: ModelDownloadInfo) => {
 				console.log(info.percent.toFixed(2));
 			},
