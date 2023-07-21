@@ -20,7 +20,8 @@
 			})
 			.start();
 
-		BfsGLTFLoader.getInstance().loadGLTF('$lib/cube1.glb', {
+		// deploy:bfs-webpage/cube1.glb
+		BfsGLTFLoader.getInstance().loadGLTF('cube1.glb', {
 			onProgress: (info: ModelDownloadInfo) => {
 				console.log(info.percent.toFixed(2));
 			},
