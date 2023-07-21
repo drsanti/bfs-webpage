@@ -20,9 +20,9 @@
 	});
 </script>
 
-<div class="flex justify-cente relative">
-	<div class=" absolute bg-black/50 w-full h-full z-10">
-		<div class="flex justify-center items-center h-full">
+<div class="flex justify-center relative">
+	<div class=" absolute bg-black/70 w-full h-full z-10">
+		<div class="flex justify-center items-center h-full border">
 			<button>Lick</button>
 		</div>
 	</div>
