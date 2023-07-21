@@ -1,5 +1,5 @@
 {
-	"name": "@ui3d/demo",
+	"name": "bfs-webpage",
 	"version": "0.0.1",
 	"homepage": ".",
 	"private": false,
@@ -39,17 +39,16 @@
 		"tailwindcss": "^3.3.2",
 		"tslib": "^2.4.1",
 		"typescript": "^5.0.0",
-		"vite": "^4.3.0"
+		"vite": "^4.3.0",
+		"@types/mqtt": "^2.5.0",
+		"@types/paho-mqtt": "^1.0.7",
+		"@types/reveal.js": "^4.4.2"
 	},
 	"type": "module",
 	"dependencies": {
-		"@fontsource/jetbrains-mono": "^5.0.3",
-		"@fontsource/manrope": "^5.0.3",
-		"@types/mqtt": "^2.5.0",
-		"@types/paho-mqtt": "^1.0.7",
-		"@types/reveal.js": "^4.4.2",
 		"chroma-js": "^2.4.2",
 		"gsap": "^3.11.5",
-		"skeleton-ui": "^0.0.8"
+		"skeleton-ui": "^0.0.8",
+		"three": "^0.154.0"
 	}
 }

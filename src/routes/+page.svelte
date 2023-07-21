@@ -4,6 +4,11 @@
 	import BlocksShuffle_3 from '../Components/shared/svg-icons/blocks-shuffle-3.svelte';
 	import { BfsCanvas } from '../BfsThreeD/BfsCanvas';
 	import { BfsLogo } from '../BfsThreeD/BfsLogo';
+	import {
+		BfsGLTFLoader,
+		type ModelData,
+		type ModelDownloadInfo
+	} from '../BfsThreeD/Loaders/BfsGLTFLoader';
 	let params: LooperParams;
 	let looper: BfsLooper;
 	onMount(() => {
@@ -14,6 +19,15 @@
 				params = e;
 			})
 			.start();
+
+		BfsGLTFLoader.getInstance().loadGLTF('cube1.glb', {
+			onProgress: (info: ModelDownloadInfo) => {
+				console.log(info.percent.toFixed(2));
+			},
+			onLoaded: (data: ModelData) => {
+				console.log(data.glTF.scenes);
+			}
+		});
 	});
 	onDestroy(() => {
 		looper?.dispose();
