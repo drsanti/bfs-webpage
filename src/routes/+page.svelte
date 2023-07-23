@@ -9,6 +9,10 @@
 		type ModelData,
 		type ModelDownloadInfo
 	} from '../BfsThreeD/Loaders/BfsGLTFLoader';
+	import {
+		BfsTextureLoader,
+		type CubeTextureDownloadInfo
+	} from '../BfsThreeD/Loaders/BfsTextureLoader';
 	let params: LooperParams;
 	let looper: BfsLooper;
 	onMount(() => {
@@ -20,13 +24,22 @@
 			})
 			.start();
 
-		// deploy:bfs-webpage/cube1.glb
-		BfsGLTFLoader.getInstance().loadGLTF('cube1.glb', {
-			onProgress: (info: ModelDownloadInfo) => {
-				console.log(info.percent.toFixed(2));
+		// deploy >>> bfs-webpage/cube1.glb
+		// BfsGLTFLoader.getInstance().loadGLTF('cube1.glb', {
+		// 	onProgress: (info: ModelDownloadInfo) => {
+		// 		console.log(info.percent.toFixed(2));
+		// 	},
+		// 	onLoaded: (data: ModelData) => {
+		// 		console.log(data.glTF.scenes);
+		// 	}
+		// });
+
+		BfsTextureLoader.getInstance().loadDefaultCubeEnvTexture('bridge', {
+			onProgress: (info: CubeTextureDownloadInfo) => {
+				console.log(info);
 			},
-			onLoaded: (data: ModelData) => {
-				console.log(data.glTF.scenes);
+			onDownloaded: (cubeText: THREE.CubeTexture) => {
+				console.log(cubeText);
 			}
 		});
 	});
